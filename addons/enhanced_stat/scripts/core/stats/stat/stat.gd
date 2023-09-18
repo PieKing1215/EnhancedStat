@@ -23,7 +23,13 @@ signal value_changed
 var value:
 	get = get_value
 
+var sync_value
+var use_sync_value := false
+
 func get_value():
+	return sync_value if use_sync_value else _get_value()
+
+func _get_value():
 	return base_value
 
 

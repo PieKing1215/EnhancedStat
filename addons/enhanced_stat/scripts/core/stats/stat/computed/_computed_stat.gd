@@ -7,7 +7,7 @@ class_name ComputedStat
 ###
 var _value
 
-func get_value():
+func _get_value():
 	return _value
 
 func compute() -> void:

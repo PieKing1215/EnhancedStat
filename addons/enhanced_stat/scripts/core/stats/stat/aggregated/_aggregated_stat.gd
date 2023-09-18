@@ -8,7 +8,7 @@ class_name AggregatedStat
 var _value:
 	set = set_value
 
-func get_value():
+func _get_value():
 	return _value
 
 func set_value(new_value):
