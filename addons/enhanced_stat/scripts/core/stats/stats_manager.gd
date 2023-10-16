@@ -84,7 +84,7 @@ func _on_stat_value_changed(key: GDScript, stat: Stat) -> void:
 	sync_stat.rpc(key.resource_path, stat.value)
 
 ## Sync the stat value of a specific stat by it's key and it's current value
-@rpc("call_local")
+@rpc("call_local", "reliable")
 func sync_stat(key_path, value) -> void:
 	var key: GDScript = load(key_path)
 	var stat: Stat = get_stat(key)
